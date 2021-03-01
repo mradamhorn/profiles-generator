@@ -11,6 +11,8 @@ const Intern = require('./lib/Intern');
 // Importing HTML Template file
 const generateHTML = require('./src/generateHTML');
 
+let employeeList = [];
+
 // Question prompts for the user inputs
 const promptUser = () => {
     return inquirer.prompt([
@@ -73,7 +75,20 @@ const promptUser = () => {
                 return name !== '';
             },
         },
-    ])
+        {
+            type: 'input',
+            message: 'Add another employee? (yes/no)',
+            name: 'confirm'
+        },
+    ]).then((answers) => {
+        if (answers.confirm === 'yes' || 'y' || 'Yes' || 'Y') {
+            employeeList += answers;
+            console.log(employeeList, answers)
+            promptUser();
+        } else if (answers.confirm === 'no' || 'No' || 'n' || 'N') {
+            return;
+        }
+    })
 };
 
 // Function to write the HTML file
