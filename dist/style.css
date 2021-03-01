@@ -1,0 +1,18 @@
+.jumbotron {
+    background-image: url(https://cdn.statically.io/img/wallpaperaccess.com/full/471788.jpg);
+    /* background-color: #01bd01; */
+    padding: 5px;
+    color: #87ffff;
+}
+
+.manager-card {
+    background-color: #e63f3f;
+}
+
+.engineer-card {
+    background-color: #3f6ce6;
+}
+
+.intern-card {
+    background-color: #e6e33f;
+}

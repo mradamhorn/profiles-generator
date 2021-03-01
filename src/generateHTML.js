@@ -19,12 +19,20 @@ const generateHTML = (answers) =>
     </head>
     
     <body>
-        <div class="jumbotron">
-            <div id="banner">
-                <header class="display-1 shadow my-3 pb-4 text-center">Star Tech: Deep Net Nine<br>
-                </header>
-            </div>
+        <div class="jumbotron navbar-fixed-top text-center shadow">
+            <header class="display-1 my-2 pb-3">Star Tech: Deep Net Nine</header>
         </div>
     
+        <div class='container'>
+            <div class='row m-3'>
+                <div id='manager-container'></div>
+            </div>
+            <div class='row m-3'>
+                <div id='engineer-container'></div>
+            </div>
+            <div class='row m-3'>
+                <div id='intern-container'></div>
+            </div>
+        </div>
     </body>
     </html>`
