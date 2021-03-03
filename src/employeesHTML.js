@@ -3,13 +3,13 @@ const employeeCards = (answers) => {
         return `
         <div class="card manager-card shadow-sm" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">${this.answers.name}</h5>
-                <h6 class="card-text">${this.answers.role}</h6>
+                <h4 class="card-title">${answers.name}</h4>
+                <h6 class="card-text">${answers.role}</h6>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Employee ID: ${this.answers.id}</li>
-                <li class="list-group-item">Email: ${this.answers.email}</li>
-                <li class="list-group-item">Office Number: ${this.answers.officeNumber}</li>
+                <li class="list-group-item">Employee ID: ${answers.id}</li>
+                <li class="list-group-item">Email: ${answers.email}</li>
+                <li class="list-group-item">Office Number: ${answers.officeNumber}</li>
             </ul>
         </div>
         `
@@ -17,13 +17,13 @@ const employeeCards = (answers) => {
         return `
         <div class="card engineer-card shadow-sm" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">${this.answers.name}</h5>
-                <h6 class="card-text">${this.answers.role}</h6>
+                <h4 class="card-title">${answers.name}</h4>
+                <h6 class="card-text">${answers.role}</h6>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Employee ID: ${this.answers.id}</li>
-                <li class="list-group-item">Email: ${this.answers.email}</li>
-                <li class="list-group-item">GitHub Username: ${this.answers.github}</li>
+                <li class="list-group-item">Employee ID: ${answers.id}</li>
+                <li class="list-group-item">Email: ${answers.email}</li>
+                <li class="list-group-item">GitHub Username: ${answers.github}</li>
             </ul>
         </div>
         `
@@ -31,15 +31,17 @@ const employeeCards = (answers) => {
         return `
         <div class="card intern-card shadow-sm" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">${this.answers.name}</h5>
-                <h6 class="card-text">${this.answers.role}</h6>
+                <h4 class="card-title">${answers.name}</h4>
+                <h6 class="card-text">${answers.role}</h6>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Employee ID: ${this.answers.id}</li>
-                <li class="list-group-item">Email: ${this.answers.email}</li>
-                <li class="list-group-item">School: ${this.answers.school}</li>
+                <li class="list-group-item">Employee ID: ${answers.id}</li>
+                <li class="list-group-item">Email: ${answers.email}</li>
+                <li class="list-group-item">School: ${answers.school}</li>
             </ul>
         </div>
         `
     }
 }
+
+module.exports = employeeCards;

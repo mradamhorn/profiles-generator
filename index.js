@@ -10,6 +10,7 @@ const Intern = require('./lib/Intern');
 
 // Importing HTML Template file
 const generateHTML = require('./src/generateHTML');
+const employeesHTML = require('./src/employeesHTML');
 
 let employeeList = [];
 
@@ -81,12 +82,37 @@ const promptUser = () => {
             name: 'confirm'
         },
     ]).then((answers) => {
-        if (answers.confirm === 'yes' || 'y' || 'Yes' || 'Y') {
-            employeeList += answers;
+        employeeList.push(answers);
+
+        if (answers.confirm === 'yes') {
             console.log(employeeList, answers)
             promptUser();
-        } else if (answers.confirm === 'no' || 'No' || 'n' || 'N') {
-            return;
+        } else {
+            let employeeArray = {
+                manCards: '',
+                engCards: '',
+                intCards: '',
+            };
+            for (let i = 0; i < employeeList.length; i++) {
+                let employees = employeesHTML(employeeList[i]);
+                // string += employees;
+                switch (employeeList[i].role) {
+                    case 'Manager':
+                        employeeArray.manCards += employees;
+                        break;
+                    case 'Engineer':
+                        employeeArray.engCards += employees;
+                        break;
+                    case 'Intern':
+                        employeeArray.intCards += employees;
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+
+            init(employeeArray);
         }
     })
 };
@@ -95,12 +121,14 @@ const promptUser = () => {
 const writeHTML = util.promisify(fs.writeFile);
 
 // Function to initialize the writing of the HTML file
-const init = () => {
-    promptUser()
-        .then((answers) => writeHTML(`${__dirname}/dist/index.html`, generateHTML(answers)))
+const init = (answers) => {
+    writeHTML(`${__dirname}/dist/index.html`, generateHTML(answers))
         .then(() => console.log('Successfully wrote index.html file!'))
         .catch((err) => console.log(err));
 }
 
-// Calling the initializing function
-init();
+// Calling the prompt user function
+promptUser()
+
+
+

@@ -1,5 +1,5 @@
-const generateHTML = (answers) =>
-    `<!DOCTYPE html>
+const generateHTML = (answers) => {
+    return `<!DOCTYPE html>
     <html lang="en">
     
     <head>
@@ -13,26 +13,30 @@ const generateHTML = (answers) =>
             integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
             crossorigin="anonymous"></script>
     
-        <link rel="stylesheet" href="${__dirname}/dist/style.css" />
+        <link rel="stylesheet" href="style.css" />
     
-        <title>Document</title>
+        <title>Star Tech</title>
     </head>
     
     <body>
         <div class="jumbotron navbar-fixed-top text-center shadow">
-            <header class="display-1 my-2 pb-3">Star Tech: Deep Net Nine</header>
+            <header class="display-1 my-2 pb-3">Star Tech: Next Generation</header>
         </div>
     
+        
         <div class='container'>
             <div class='row m-3'>
-                <div id='manager-container'></div>
+                ${answers.manCards}
             </div>
             <div class='row m-3'>
-                <div id='engineer-container'></div>
+                ${answers.engCards}
             </div>
             <div class='row m-3'>
-                <div id='intern-container'></div>
+                ${answers.intCards}
             </div>
         </div>
     </body>
     </html>`
+}
+
+module.exports = generateHTML;

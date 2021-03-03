@@ -6,13 +6,22 @@
 }
 
 .manager-card {
-    background-color: #e63f3f;
+    background-color: #e63f3fe7;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 15px;
 }
 
 .engineer-card {
-    background-color: #3f6ce6;
+    background-color: #3f6ce6e3;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 15px;
 }
 
 .intern-card {
-    background-color: #e6e33f;
+    background-color: #e6e33fe1;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 15px;
 }
