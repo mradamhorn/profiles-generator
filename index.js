@@ -88,7 +88,7 @@ const promptUser = () => {
             console.log(employeeList, answers)
             promptUser();
         } else {
-            let employeeArray = {
+            let employeeAnswers = {
                 manCards: '',
                 engCards: '',
                 intCards: '',
@@ -98,13 +98,13 @@ const promptUser = () => {
                 // string += employees;
                 switch (employeeList[i].role) {
                     case 'Manager':
-                        employeeArray.manCards += employees;
+                        employeeAnswers.manCards += employees;
                         break;
                     case 'Engineer':
-                        employeeArray.engCards += employees;
+                        employeeAnswers.engCards += employees;
                         break;
                     case 'Intern':
-                        employeeArray.intCards += employees;
+                        employeeAnswers.intCards += employees;
                         break;
                     default:
                         break;
@@ -112,7 +112,7 @@ const promptUser = () => {
 
             }
 
-            init(employeeArray);
+            init(employeeAnswers);
         }
     })
 };
