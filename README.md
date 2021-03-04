@@ -9,8 +9,8 @@
 - [Questions](#questions)
 - [License](#license)
 
-## Instructional Video
-[Instructional Video](https://drive.google.com/file/d/1Wa_Lo4BhqAqUVIBHqLvVoCBXCohMMw2L/view?usp=sharing)
+## Demostration
+[Demonstration Video](https://drive.google.com/file/d/1Khak8tXVQmokAwGh3EykHrikBdTPxizI/view)
 
 ## Description
 This application is a Node.js based profile generator to organize employees of an organization into cards on a webpage. The cards have general information for all employee types, which includes name, employee type (Manager, Engineer, or Intern), employee ID, and email. Depending on the specific type of employee, the cards will also include office number for Managers, GitHub user name for Engineers, and school for Interns. 
